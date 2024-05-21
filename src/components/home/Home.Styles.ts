@@ -1,3 +1,28 @@
+export const flexProperties = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+};
+
+export const tooltipProperties = {
+  opacity: 1,
+  pointerEvents: "auto",
+  visibility: "visible",
+  top: "-45px",
+  color: "#fff",
+};
+
+export const tooltipTriangle = {
+  position: "absolute",
+  content: "''",
+  width: "9px",
+  height: "9px",
+  bottom: "-4px",
+  left: "50%",
+  transform: "translate(-50%) rotate(45deg)",
+  transition: "all 0.6s ease",
+};
+
 const homeStyles = {
   mainContainer: {
     background: "#121620",
@@ -14,10 +39,8 @@ const homeStyles = {
     background: "#201F1E",
     height: "180px",
     borderRadius: "10px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
     p: "0px 30px",
+    ...flexProperties,
   },
 
   listContainer: {
@@ -37,18 +60,19 @@ const homeStyles = {
     borderRadius: "50%",
     width: "50px",
     height: "50px",
-    transition: "all 0.4s ease",
-    display: "flex",
+    transition: "all 0.6s ease",
+    ...flexProperties,
     flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
     cursor: "pointer",
+    "& .social-icon": {
+      fontSize: "20px",
+    },
     "&:hover > span:nth-of-type(1)": {
-      opacity: "1",
-      pointerEvents: "auto",
-      visibility: "visible",
-      top: "-45px",
-      background: "#fff",
+      // opacity: 1,
+      // pointerEvents: "auto",
+      // visibility: "visible",
+      // top: "-45px",
+      // background: "#fff",
     },
     "&:hover social-icon": {
       color: "#fff",
@@ -57,24 +81,17 @@ const homeStyles = {
 
   tooltip: {
     position: "absolute",
-    top: "0",
-    font: "100 12px Roboto",
+    top: 0,
+    font: "100 13px Roboto",
     color: "#000",
-    padding: "5px 8px",
+    padding: "6px 10px",
     borderRadius: "5px",
-    opacity: "0",
+    opacity: 0,
     pointerEvents: "none",
-    transition: "all 0.5s ease",
+    transition: "all 0.6s ease",
     "&::before": {
-      position: "absolute",
-      content: "''",
-      width: "8px",
-      height: "8px",
+      ...tooltipTriangle,
       background: "#fff",
-      bottom: "-3px",
-      left: "50%",
-      transform: "translate(-50%) rotate(45deg)",
-      transition: "all 0.3s ease",
     },
   },
 
@@ -83,26 +100,15 @@ const homeStyles = {
       background: "#1690F0",
     },
     "&:hover > span:nth-of-type(1)": {
+      ...tooltipProperties,
       background: "#1690F0",
-      opacity: "1",
-      pointerEvents: "auto",
-      visibility: "visible",
-      top: "-45px",
-      color: "#fff",
     },
     "&:hover > span:nth-of-type(2)": {
       color: "#fff",
     },
     "&:hover > span:nth-of-type(1)::before": {
-      position: "absolute",
-      content: "''",
-      width: "8px",
-      height: "8px",
+      ...tooltipTriangle,
       background: "#1690F0",
-      bottom: "-3px",
-      left: "50%",
-      transform: "translate(-50%) rotate(45deg)",
-      transition: "all 0.3s ease",
     },
   },
 
@@ -111,26 +117,15 @@ const homeStyles = {
       background: "#106AFF",
     },
     "&:hover > span:nth-of-type(1)": {
+      ...tooltipProperties,
       background: "#106AFF",
-      opacity: "1",
-      pointerEvents: "auto",
-      visibility: "visible",
-      top: "-45px",
-      color: "#fff",
     },
     "&:hover > span:nth-of-type(2)": {
       color: "#fff",
     },
     "&:hover > span:nth-of-type(1)::before": {
-      position: "absolute",
-      content: "''",
-      width: "8px",
-      height: "8px",
+      ...tooltipTriangle,
       background: "#106AFF",
-      bottom: "-3px",
-      left: "50%",
-      transform: "translate(-50%) rotate(45deg)",
-      transition: "all 0.3s ease",
     },
   },
 
@@ -139,26 +134,15 @@ const homeStyles = {
       background: "#B710EE",
     },
     "&:hover > span:nth-of-type(1)": {
+      ...tooltipProperties,
       background: "#B710EE",
-      opacity: "1",
-      pointerEvents: "auto",
-      visibility: "visible",
-      top: "-45px",
-      color: "#fff",
     },
     "&:hover > span:nth-of-type(2)": {
       color: "#fff",
     },
     "&:hover > span:nth-of-type(1)::before": {
-      position: "absolute",
-      content: "''",
-      width: "8px",
-      height: "8px",
+      ...tooltipTriangle,
       background: "#B710EE",
-      bottom: "-3px",
-      left: "50%",
-      transform: "translate(-50%) rotate(45deg)",
-      transition: "all 0.3s ease",
     },
   },
 
@@ -167,26 +151,15 @@ const homeStyles = {
       background: "#283344",
     },
     "&:hover > span:nth-of-type(1)": {
+      ...tooltipProperties,
       background: "#283344",
-      opacity: "1",
-      pointerEvents: "auto",
-      visibility: "visible",
-      top: "-45px",
-      color: "#fff",
     },
     "&:hover > span:nth-of-type(2)": {
       color: "#fff",
     },
     "&:hover > span:nth-of-type(1)::before": {
-      position: "absolute",
-      content: "''",
-      width: "8px",
-      height: "8px",
+      ...tooltipTriangle,
       background: "#283344",
-      bottom: "-3px",
-      left: "50%",
-      transform: "translate(-50%) rotate(45deg)",
-      transition: "all 0.3s ease",
     },
   },
 
@@ -195,26 +168,15 @@ const homeStyles = {
       background: "#FF0808",
     },
     "&:hover > span:nth-of-type(1)": {
+      ...tooltipProperties,
       background: "#FF0808",
-      opacity: "1",
-      pointerEvents: "auto",
-      visibility: "visible",
-      top: "-45px",
-      color: "#fff",
     },
     "&:hover > span:nth-of-type(2)": {
       color: "#fff",
     },
     "&:hover > span:nth-of-type(1)::before": {
-      position: "absolute",
-      content: "''",
-      width: "8px",
-      height: "8px",
+      ...tooltipTriangle,
       background: "#FF0808",
-      bottom: "-3px",
-      left: "50%",
-      transform: "translate(-50%) rotate(45deg)",
-      transition: "all 0.3s ease",
     },
   },
 };

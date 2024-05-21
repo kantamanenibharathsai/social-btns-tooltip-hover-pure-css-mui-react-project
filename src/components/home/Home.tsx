@@ -27,7 +27,7 @@ const Home = () => {
                                 Twitter
                             </Box>
                             <Box component="span">
-                                <AiOutlineTwitter />
+                                <AiOutlineTwitter className="social-icon"/>
                             </Box>
                         </Box>
 
@@ -36,7 +36,7 @@ const Home = () => {
                                 Instagram
                             </Box>
                             <Box component="span">
-                                <IoLogoInstagram />
+                                <IoLogoInstagram className="social-icon"/>
                             </Box>
                         </Box>
 
@@ -45,7 +45,7 @@ const Home = () => {
                                 Github
                             </Box>
                             <Box component="span">
-                                <DiGithubBadge />
+                                <DiGithubBadge className="social-icon"/>
                             </Box>
                         </Box>
 
@@ -54,7 +54,7 @@ const Home = () => {
                                 Youtube
                             </Box>
                             <Box component="span">
-                                <FaYoutube />
+                                <FaYoutube className="social-icon"/>
                             </Box>
                         </Box>
                     </Box>
